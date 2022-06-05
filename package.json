@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "nm:run:simple": "newman run sample-collection.json",
+    "nm:run:data": "newman run sample-collection.json --iteration-data sample-data.json"
+  },
+  "dependencies": {
+    "newman": "^5.3.2"
+  }
+}
