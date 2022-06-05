@@ -1,9 +1,13 @@
 {
   "scripts": {
     "nm:run:simple": "newman run sample-collection.json",
-    "nm:run:data": "newman run sample-collection.json --iteration-data sample-data.json"
+    "nm:run:data": "newman run sample-collection.json --iteration-data sample-data.json",
+    "nm:run:reporter": "newman run sample-collection.json -r cli,gchat  --reporter-gchat-title 'Test Results' --reporter-gchat-build-url https://result.com --reporter-gchat-webhook-url 'https://googleapis.com/v1/spaces/webhook'"
   },
   "dependencies": {
     "newman": "^5.3.2"
+  },
+  "optionalDependencies": {
+    "newman-reporter-gchat": "file:newman-reporter-gchat-1.0.0.tgz"
   }
 }
